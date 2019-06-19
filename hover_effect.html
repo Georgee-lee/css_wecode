@@ -6,6 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    body {
+      background-image: url('./images/background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #main {
+      width: 100px;
+      height: 200px;
+      margin: 300px auto 0;
+    }
+
     .container {
       display: inline-block;
       position: relative;
@@ -13,7 +25,8 @@
 
     span {
       position: relative;
-      font-size: 30px;
+      font-size: 50px;
+      color: white;
     }
 
     .on-hover {
@@ -33,25 +46,25 @@
   </style>
 </head>
 <body>
-  
+<div id="main">
   <div class="container">
     <span>Work</span>
     <div class="on-hover"></div>
   </div>
   
-   <hr />
+   <br />
   
   <div class="container">
     <span>Blog</span>
     <div class="on-hover"></div>
   </div>
   
-  <hr />
+  <br />
   
   <div class="container">
     <span>Stay</span>
     <div class="on-hover"></div>
   </div>
-
+</div>
 </body>
 </html>
