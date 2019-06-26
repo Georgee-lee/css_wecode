@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+    body {
+      font-family: 'Rubik Mono One', sans-serif;
+      padding: 50px;
+      background-color: #BC8F8F;
+    }
+
+    .text {
+      position: relative;
+      display: inline-block;
+      font-size: 100px;
+      color: #BC8F8F;
+      z-index: 2;
+    }
+
+    .circle {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-color: white;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<div class='text'>
+ <div class='circle'></div>
+ <p>Anxiety is the dizziness of freedom.</p>
+ <p>Old Ways Won't Open New Doors.</p>
+</div>
+
+ <script>
+  const minWidth = Math.floor($('.text').offset().left);
+  const minHeight = Math.floor($('.text').offset().top);
+  const maxWidth = ($(window).width() - minWidth + $('.text').outerWidth());
+  const maxHeight = ($(window).height() - minHeight + $('.text').outerHeight());
+
+  const CIRCLE = 160;
+
+  $(document).mousemove(e => {
+    let mouseXpixel = e.pageX;
+    let mouseYpixel = e.pageY;
+    
+    if(mouseXpixel >= minWidth && mouseYpixel >= minHeight && mouseXpixel <= maxWidth && mouseYpixel <= maxHeight) {
+      $('.circle').css('left', mouseXpixel - CIRCLE);
+      $('.circle').css('top', mouseYpixel - CIRCLE);
+    }
+  })
+ </script>
+</body>
+</html>
