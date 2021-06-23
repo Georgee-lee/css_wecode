@@ -9,3 +9,8 @@
 > mouse hover Effect  
 
 ![mouse](./images/mouse_effect.gif)
+
+### css_animation
+> Input label animation
+
+![input-animation](./images/input_animation.gif)
